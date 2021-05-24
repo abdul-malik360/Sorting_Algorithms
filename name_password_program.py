@@ -16,7 +16,7 @@ name_ent = Entry(root, text=" ", width=25, textvariable=user_names)
 name_ent.place(x=120, y=90)
 
 Label(root, text="Password: ").place(x=20, y= 130)
-password_ent = Entry(root, text=" ", width=25, textvariable=passwords, show="*")
+password_ent = Entry(root, text=" ", width=25, textvariable=passwords, show=" ")
 password_ent.place(x=120, y=130)
 
 
@@ -34,6 +34,7 @@ def access():
             found = True
 
     if found == True:
+        import nxt_screen
         messagebox.showinfo("Login Successful", "Access Granted!")
 
     else:
