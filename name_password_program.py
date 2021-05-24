@@ -4,18 +4,19 @@ from tkinter import messagebox
 root = Tk()
 root.geometry("500x500")
 root.title("Login Details")
+root.config(bg="green")
 
 user_names = StringVar()
 passwords = StringVar()
 
-Label(root, text="Enter user name and password ").place(x=150, y=50)
+Label(root, text="Enter user name and password ", bg="light green").place(x=150, y=50)
 
-Label(root, text="Username: ").place(x=20, y=90)
+Label(root, text="Username: ", bg="light green").place(x=20, y=90)
 
 name_ent = Entry(root, text=" ", width=25, textvariable=user_names)
 name_ent.place(x=120, y=90)
 
-Label(root, text="Password: ").place(x=20, y= 130)
+Label(root, text="Password: ", bg="light green").place(x=20, y= 130)
 password_ent = Entry(root, text=" ", width=25, textvariable=passwords, show=" ")
 password_ent.place(x=120, y=130)
 
@@ -50,13 +51,13 @@ def close_program():
     root.destroy()
 
 
-login = Button(root, text="Login", borderwidth="5", command=access)
+login = Button(root, text="Login", borderwidth="5", command=access, bg="light green")
 login.place(x=260, y=170)
 
-clear_btn = Button(root, text="Clear", borderwidth="5", command=clear)
+clear_btn = Button(root, text="Clear", borderwidth="5", command=clear, bg="light green")
 clear_btn.place(x=120, y=270)
 
-close = Button(root, text="close", borderwidth="5", command=close_program)
+close = Button(root, text="close", borderwidth="5", command=close_program, bg="light green")
 close.place(x=260, y=270)
 
 
