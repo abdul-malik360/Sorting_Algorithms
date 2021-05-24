@@ -60,11 +60,6 @@ close = Button(root, text="close", borderwidth="5", command=close_program)
 close.place(x=260, y=270)
 
 
-
-
-
-
-
 root.mainloop()
 
 
