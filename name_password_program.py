@@ -40,12 +40,24 @@ def access():
         messagebox.showinfo("Login Failed", "Access Denied!")
 
 
+def clear():
+    name_ent.delete(0, END)
+    password_ent.delete(0, END)
 
 
+def close_program():
+    root.destroy()
 
 
 login = Button(root, text="Login", borderwidth="5", command=access)
 login.place(x=260, y=170)
+
+clear_btn = Button(root, text="Clear", borderwidth="5", command=clear)
+clear_btn.place(x=120, y=270)
+
+close = Button(root, text="close", borderwidth="5", command=close_program)
+close.place(x=260, y=270)
+
 
 
 
