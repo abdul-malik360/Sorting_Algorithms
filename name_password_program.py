@@ -14,10 +14,11 @@ Label(root, text="Enter user name and password ", bg="light green").place(x=150,
 Label(root, text="Username: ", bg="light green").place(x=20, y=90)
 
 name_ent = Entry(root, text=" ", width=25, textvariable=user_names)
+name_ent.focus()
 name_ent.place(x=120, y=90)
 
 Label(root, text="Password: ", bg="light green").place(x=20, y= 130)
-password_ent = Entry(root, text=" ", width=25, textvariable=passwords, show=" ")
+password_ent = Entry(root, text=" ", width=25, textvariable=passwords, show="*")
 password_ent.place(x=120, y=130)
 
 
@@ -35,8 +36,9 @@ def access():
             found = True
 
     if found == True:
-        import nxt_screen
         messagebox.showinfo("Login Successful", "Access Granted!")
+        root.destroy()
+        import nxt_screen
 
     else:
         messagebox.showinfo("Login Failed", "Access Denied!")
